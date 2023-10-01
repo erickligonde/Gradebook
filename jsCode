@@ -1,1 +1,46 @@
+/ Welcome
+console.log("Welcome to the gradebook!")
+// Create the grades
+let perfectScore = 100;
+let a = 90;
+let b = 80;
+let c = 70;
+let d = 60;
+let f = 50;
+let completelyFail = 0;
+
+//Create the grade function
+function testGrade(student) {
+  if (student.grade >= a && student.grade < perfectScore) {
+    return "A";
+  } else if (student.grade >= b && student.grade < a) {
+    return "B";
+  } else if (student.grade >= c && student.grade < b) {
+    return "C";
+  } else if (student.grade >= d && student.grade < c) {
+    return "D";
+  } else if (student.grade < d) {
+    return "F";
+  }
+}
+
+let students = [
+  {name:"Erick", grade: 92},
+  {name: "Maria", grade: 95},
+  {name: "Alex", grade: 87},
+  {name: "Carl", grade: 74},
+  {name: "Kareem", grade: 69},
+  {name: "Melanie", grade: 77},
+  {name: "Ashley", grade: 64},
+  {name: "Raquel", grade: 64},
+  {name: "Cam", grade: 57},
+  {name: "Zoe", grade: 90},
+]
+for (var i = 0; i < students.length; i++) {
+  student = students[i]
+  var grade = testGrade(student)
+  console.log(student.name + " scored " + student.grade + " and received a grade of " + grade)
+  
+}
+
 
